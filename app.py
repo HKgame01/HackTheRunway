@@ -12,5 +12,19 @@ def home_page():
     ]
     return render_template('home.html', items=items)
 
+
+@app.route('/male')
+def male():
+    return render_template('male.html')
+
+@app.route('/female')
+def female():
+    return render_template('female.html')
+
+@app.route('/non-binary')
+def nonbinary():
+    return render_template('nonbinary.html')
+
+
 if __name__ == "__main__":
     app.run(debug=True)
