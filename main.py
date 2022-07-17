@@ -16,12 +16,12 @@ def home_page():
 @app.route('/male')
 def male():
     clothes = [
-      {'img': "/static/img/mens-blazer.jpg",  'title': 'Blazer',   'text': 'Placeholder text'},
-      {'img': "/static/img/mens-shirts.jpg",  'title': 'Shirt',    'text': 'Placeholder text'},
-      {'img': "/static/img/mens-pants.webp",   'title': 'Pants',    'text': 'Placeholder text'},
-      {'img': "/static/img/mens-shoes.jpg",  'title': 'Shoes',   'text': 'Placeholder text'},
-      {'img': "/static/img/mens-sweater.jpg", 'title': 'Sweater',  'text': 'Placeholder text'},
-      {'img': "/static/img/mens-tshirt.jpg",  'title': 'Tshirt',   'text': 'Placeholder text'}
+      {'img': "/static/img/mens-blazer.jpg",  'title': 'Blazer',   'text': 'Placeholder text', 'link': "https://a.co/d/eOwDI8h"},
+      {'img': "/static/img/mens-shirts.jpg",  'title': 'Shirt',    'text': 'Placeholder text', 'link': "#"},
+      {'img': "/static/img/mens-pants.webp",   'title': 'Pants',    'text': 'Placeholder text', 'link': "#"},
+      {'img': "/static/img/mens-shoes.jpg",  'title': 'Shoes',   'text': 'Placeholder text', 'link': "#"},
+      {'img': "/static/img/mens-sweater.jpg", 'title': 'Sweater',  'text': 'Placeholder text', 'link': "#"},
+      {'img': "/static/img/mens-tshirt.jpg",  'title': 'Tshirt',   'text': 'Placeholder text', 'link': "#"}
       
     ]
     return render_template('male.html', clothes=clothes)
