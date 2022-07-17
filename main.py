@@ -15,7 +15,16 @@ def home_page():
 
 @app.route('/male')
 def male():
-    return render_template('male.html')
+    clothes = [
+      {'img': "/static/img/mens-blazer.jpg",  'title': 'Blazer',   'text': 'Placeholder text'},
+      {'img': "/static/img/mens-shirts.jpg",  'title': 'Shirt',    'text': 'Placeholder text'},
+      {'img': "/static/img/mens-pants.webp",   'title': 'Pants',    'text': 'Placeholder text'},
+      {'img': "/static/img/mens-shoes.jpg",  'title': 'Shoes',   'text': 'Placeholder text'},
+      {'img': "/static/img/mens-sweater.jpg", 'title': 'Sweater',  'text': 'Placeholder text'},
+      {'img': "/static/img/mens-tshirt.jpg",  'title': 'Tshirt',   'text': 'Placeholder text'}
+      
+    ]
+    return render_template('male.html', clothes=clothes)
 
 @app.route('/female')
 def female():
@@ -27,4 +36,4 @@ def nonbinary():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0",debug=True)

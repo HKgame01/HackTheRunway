@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <meta name="monetization" content="$ilp.uphold.com/dzaZaKj8pMhH">
+{% endblock %}
+
+{% block title %}
+  Male Trends
+{% endblock %}
+
+{% block content %}
+
+<!--<h1 style="color:black;">Male</h1> -->
+<!-- <div class="d-flex justify-content-around"> -->
+
+<div class="rohan">
+{% for c in clothes %}
+
+
+  <div class="my-3 row">
+      <div class="card w-80">
+        <div class="card-body">
+          <img class="card-img-top" id="card-image" src={{c.img}} alt="">
+          <h5 class="mt-2 card-title" style="color:black;">{{c.title}}</h5>
+          <p class="card-text" style="color:black;">{{c.text}}</p>
+          <a href="#" class="btn btn-primary" id="amazon-button">Buy using Amazon</a>
+        </div>
+      </div>
+  </div>
+
+
+{% endfor %}
+</div>
+
+
+{% endblock %}
+
+{% block jscript %}
+<script>
+  
+  if (document.monetization) {
+    var b = document.getElementsbyClassName("btn btn-primary")[0];
+    b.style.display = "visible";
+    var c = document.getElementByID("card-image");
+    c.style.filter = "blur(0px)";
+  }
+  
+</script>
+{% endblock %}
+
+ {% block slink %}
+<link rel="stylesheet" href="/static/styles/style.css">
+  {% endblock %}
+
+
+
