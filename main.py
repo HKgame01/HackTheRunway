@@ -16,12 +16,12 @@ def home_page():
 @app.route('/male')
 def male():
     clothes = [
-      {'img': "/static/img/mens-blazer.jpg",  'title': 'Blazer',   'text': 'Placeholder text', 'link': "https://a.co/d/eOwDI8h"},
-      {'img': "/static/img/mens-shirts.jpg",  'title': 'Shirt',    'text': 'Placeholder text', 'link': "#"},
-      {'img': "/static/img/mens-pants.webp",   'title': 'Pants',    'text': 'Placeholder text', 'link': "#"},
-      {'img': "/static/img/mens-shoes.jpg",  'title': 'Shoes',   'text': 'Placeholder text', 'link': "#"},
-      {'img': "/static/img/mens-sweater.jpg", 'title': 'Sweater',  'text': 'Placeholder text', 'link': "#"},
-      {'img': "/static/img/mens-tshirt.jpg",  'title': 'Tshirt',   'text': 'Placeholder text', 'link': "#"}
+      {'img': "/static/img/mens-blazer.jpg",  'title': 'Blazer',   'text': "The perfect blazer for a confident man.", 'link': "https://a.co/d/eOwDI8h"},
+      {'img': "/static/img/mens-shirts.jpg",  'title': 'Shirt',    'text': "The shirt that's grabbing everyone's attention.", 'link': "#"},
+      {'img': "/static/img/mens-pants.webp",   'title': 'Pants',    'text': "Trousers you'll want to keep an eye out for.", 'link': "#"},
+      {'img': "/static/img/mens-shoes.jpg",  'title': 'Shoes',   'text': "A snazzy fit for your feet.", 'link': "#"},
+      {'img': "/static/img/mens-sweater.jpg", 'title': 'Sweater',  'text': "A sweater you'll definitely want this fall.", 'link': "#"},
+      {'img': "/static/img/mens-tshirt.jpg",  'title': 'Tshirt',   'text': 'The comfiest T-shirt.', 'link': "#"}
       
     ]
     return render_template('male.html', clothes=clothes)
